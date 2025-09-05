@@ -1,16 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { 
-  Heart, 
   Shield, 
-  FileText, 
-  Users, 
   ArrowRight,
   Activity,
-  Stethoscope,
   Calendar
 } from 'lucide-react';
-import heroImage from '@/assets/hero-health.jpg';
 
 const HeroSection = () => {
   return (
@@ -44,7 +39,10 @@ const HeroSection = () => {
                 Get Started Today
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              >
                 View Features
               </Button>
             </div>
@@ -66,14 +64,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Image Placeholder */}
           <div className="relative">
             <div className="health-glow absolute inset-0 rounded-2xl"></div>
-            <img 
-              src={heroImage} 
-              alt="Digital Health Dashboard"
-              className="relative w-full h-auto rounded-2xl shadow-2xl"
-            />
+            <div className="relative w-full h-64 rounded-2xl shadow-2xl bg-muted flex items-center justify-center">
+              <span className="text-muted-foreground">[ Hero Image Placeholder ]</span>
+            </div>
             
             {/* Floating Health Cards */}
             <div className="absolute -top-4 -left-4 health-card p-4 bg-card/90 backdrop-blur-sm">
@@ -105,5 +101,9 @@ const HeroSection = () => {
     </div>
   );
 };
+
+export default HeroSection;
+
+
 
 export default HeroSection;
